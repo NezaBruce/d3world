@@ -13,12 +13,21 @@ const svg = d3.select("body").append("svg")
    .attr("height",height);
 const path = d3.geoPath(),
 	data = d3.map(),
-	worldmap = "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson",
-	worldpopulation = "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv";
-
+	// worldmap="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson",
+	worldmap="./data.json",
+	// worldpopulation="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv";
+	worldpopulation="./world_population.csv";
+console.log(worldmap);
+console.log(worldpopulation);
 let centered, world;
 
 // style of geographic projection and scaling
+const h =   fetch("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson", {
+	method: "GET" // default, so we can ignore
+}).then(t=>{
+	console.log(t);
+})
+console.log(h)
 const projection = d3.geoRobinson()
 	.scale(130)
 	.translate([width / 2, height / 2]);
