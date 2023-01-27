@@ -11,11 +11,11 @@ const height="450";
 const svg = d3.select("body").append("svg")
    .attr("width",width)
    .attr("height",height);
-const path = d3.geoPath(),
-	data = d3.map(),
-	worldmap="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson",
+const path = d3.geoPath();
+const data = d3.map();
+const worldmap="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson";
 	// worldmap="./data.json",
-	worldpopulation="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv";
+const worldpopulation="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv"; 
 	// worldpopulation="./world_population.csv";
 let centered, world;
 
