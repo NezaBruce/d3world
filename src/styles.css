@@ -5,11 +5,13 @@ body {
     margin: auto;
     margin-top: 5%;
     margin-left: 20%;
+    align-items: center;
   }
   
   h1 {
+    margin-left: 27%;
     font-size: 20px;
-    text-align: center;
+    /* text-align: center; */
   }
   
   #legend {
