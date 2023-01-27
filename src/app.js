@@ -1,6 +1,13 @@
 // initial setup
+
+document.addEventListener('DOMContentLoaded', function GetFavColor() {
+    // var color = localStorage.getItem('color');
+        document.body.style.backgroundColor = "blue";
+    });
+
 const width="800";
 const height="450";
+
 const svg = d3.select("body").append("svg")
    .attr("width",width)
    .attr("height",height);
