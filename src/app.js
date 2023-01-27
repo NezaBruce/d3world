@@ -22,12 +22,6 @@ console.log(worldpopulation);
 let centered, world;
 
 // style of geographic projection and scaling
-const h =   fetch("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson", {
-	method: "GET" // default, so we can ignore
-}).then(t=>{
-	console.log(t);
-})
-console.log(h)
 const projection = d3.geoRobinson()
 	.scale(130)
 	.translate([width / 2, height / 2]);
